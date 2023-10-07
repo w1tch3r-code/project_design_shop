@@ -121,7 +121,7 @@ img:hover {
     filter: opacity(.7)
 }
 
-figcaption {
+figure > div {
     display: flex;
     justify-content: space-between;
     padding-block-start: 20px;
@@ -150,9 +150,18 @@ figcaption, .company {
                             Footer
 ========================================================== */
 
-.footer {
+/* Flex Layout */
+/* .footer {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    padding-block: 20px;
+} */
+
+/* Grid Layout */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(90px, 1fr));
     gap: 20px;
     padding-block: 20px;
 }
@@ -173,7 +182,8 @@ figcaption, .company {
     color: var(--sub-line);
 }
 
-.shop {
+/* Flex Layout */
+/* .shop {
     flex-basis: 430px;
 }
 
@@ -187,6 +197,25 @@ figcaption, .company {
 
 .find__us {
     flex-basis: 260px;
+} */
+
+
+/* Grid Layout */
+.shop {
+    grid-column: 1 / 3;
+}
+
+.contact {
+    grid-column: 3 / 4;
+}
+
+.newsletter {
+    grid-column: 4 / 5;
+}
+
+.find__us {
+    grid-column: 5 / 7;
+    justify-self: center;
 }
 
 .footer span {
